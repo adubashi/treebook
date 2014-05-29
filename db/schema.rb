@@ -17,10 +17,10 @@ ActiveRecord::Schema.define(:version => 20140529202231) do
     t.text     "content"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.integer  "used_id"
+    t.integer  "user_id"
   end
 
-  add_index "statuses", ["used_id"], :name => "index_statuses_on_used_id"
+  add_index "statuses", ["user_id"], :name => "index_statuses_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "first_name"
